@@ -1,0 +1,23 @@
+@import "tailwindcss";
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.loader-text {
+  color: rgba(255,255,255,0.7);
+  font-size: 12px;
+  letter-spacing: 0.4em;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
