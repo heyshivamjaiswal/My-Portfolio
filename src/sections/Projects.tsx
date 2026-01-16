@@ -43,22 +43,23 @@ export default function Projects() {
         </span>
       </motion.div>
 
-      {/* Cards */}
+      {/* Cards Grid */}
       <motion.div
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ amount: 0.2 }}
-        className="grid md:grid-cols-3 gap-8"
+        className="grid md:grid-cols-3 gap-8 items-stretch"
       >
         {projects.map((project) => (
-          <motion.div key={project.title} variants={item}>
+          <motion.div key={project.title} variants={item} className="h-full">
             
-            {/* HOVER LAYER */}
+            {/* HOVER CARD */}
             <motion.a
               href={project.live || project.github}
               target="_blank"
-              className="group block rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-white/5 p-6
+              className="group block h-full rounded-3xl border border-black/10 dark:border-white/10 
+                bg-white dark:bg-white/5 p-6
                 transition-all duration-300 ease-out
                 hover:border-black/30 dark:hover:border-white/40
                 hover:shadow-[0_30px_120px_rgba(0,0,0,0.4)]
@@ -78,7 +79,7 @@ export default function Projects() {
                 </div>
 
                 <div className="mt-6 text-sm text-black/40 dark:text-white/40">
-                  {project.tech.join(" • ")}
+                  {project.tech?.join(" • ")}
                 </div>
               </div>
             </motion.a>

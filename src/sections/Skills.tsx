@@ -37,39 +37,61 @@ export default function Skills() {
           Skills & Stack
         </motion.h2>
 
-        {/* Cards */}
+        {/* Cards Grid */}
         <motion.div
           variants={container}
           initial="hidden"
           whileInView="show"
           viewport={{ amount: 0.2 }}
-          className="grid md:grid-cols-3 gap-10"
+          className="grid md:grid-cols-3 gap-10 items-stretch"
         >
           {[
-            { title: "Frontend", items: ["React", "TypeScript", "Tailwind CSS"] },
-            { title: "Backend", items: ["Node.js", "Express", "MongoDB", "Firebase"] },
-            { title: "Core", items: ["Data Structures & Algorithms", "Object Oriented Programming"] },
+            {
+              title: "Frontend",
+              items: [
+                "React",
+                "TypeScript",
+                "JavaScript",
+                "Redux",
+                "Zustand",
+                "ShadCN UI",
+                "Tailwind CSS",
+              ],
+            },
+            {
+              title: "Backend",
+              items: ["Node.js", "Express", "MongoDB", "Firebase"],
+            },
+            {
+              title: "Core",
+              items: [
+                "C++",
+                "Data Structures & Algorithms",
+                "Object Oriented Programming",
+              ],
+            },
           ].map((block) => (
-            <motion.div key={block.title} variants={item}>
+            <motion.div key={block.title} variants={item} className="h-full">
               {/* Card */}
               <div
-                className="h-[260px] rounded-3xl border border-black/10 dark:border-white/10 p-8 bg-black/5 dark:bg-white/5
-                  transition-all duration-300 ease-out
-                  hover:-translate-y-1 hover:scale-[1.02]
-                  hover:border-black/30 dark:hover:border-white/40
-                  hover:shadow-[0_0_60px_rgba(255,255,255,0.18)]
-                  flex flex-col"
+                className="h-full rounded-3xl border border-black/10 dark:border-white/10 p-8
+                bg-black/5 dark:bg-white/5
+                transition-all duration-300 ease-out
+                hover:-translate-y-1 hover:scale-[1.02]
+                hover:border-black/30 dark:hover:border-white/40
+                hover:shadow-[0_0_60px_rgba(255,255,255,0.18)]
+                flex flex-col"
               >
-                <h3 className="text-lg mb-4 text-black/80 dark:text-white/80">
+                <h3 className="text-lg mb-6 text-black/80 dark:text-white/80">
                   {block.title}
                 </h3>
 
-                {/* Scrollable list */}
-                <ul className="space-y-2 text-black/60 dark:text-white/60 overflow-auto pr-1">
+                {/* Numbered List */}
+                <ol className="space-y-2 text-black/60 dark:text-white/60 list-decimal list-inside">
                   {block.items.map((i) => (
                     <li key={i}>{i}</li>
                   ))}
-                </ul>
+                </ol>
               </div>
             </motion.div>
           ))}
