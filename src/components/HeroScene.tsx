@@ -6,7 +6,7 @@ import * as THREE from "three";
 function FloatingSphere() {
   const meshRef = useRef<THREE.Mesh>(null!);
 
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     if (!meshRef.current) return;
     meshRef.current.rotation.y += delta * 0.3;
     meshRef.current.rotation.x += delta * 0.15;
