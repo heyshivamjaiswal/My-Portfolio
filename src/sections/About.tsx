@@ -37,7 +37,7 @@ export default function About() {
 </p>
 
 <p className="text-black/70 dark:text-white/70 leading-relaxed max-w-xl">
-  Lately, I've been working more on backend development — building APIs, working with databases, and improving application logic.
+  Lately, I've been working more on backend development building APIs, working with databases, and improving application logic.
   Alongside this, I'm also learning data structures and algorithms to write better, more efficient, and more reliable systems.
 </p>
         </motion.div>

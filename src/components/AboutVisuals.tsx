@@ -17,7 +17,7 @@ function Sculpture() {
   return (
     <TorusKnot args={[1, 0.35, 140, 24]} scale={1.2} ref={meshRef}>
       <MeshDistortMaterial
-        distort={0.3}     // 🔽 reduced = more stable
+        distort={0.3}     
         speed={1}
         roughness={0.15}
         metalness={0.6}
@@ -31,7 +31,7 @@ export default function AboutVisuals() {
   return (
     <Canvas
       camera={{ position: [0, 0, 5], fov: 45 }}
-      dpr={[1, 1.5]}          // ✅ caps pixel ratio = stable
+      dpr={[1, 1.5]}       
       gl={{ antialias: true }}
       style={{ width: "100%", height: "100%" }}
     >
