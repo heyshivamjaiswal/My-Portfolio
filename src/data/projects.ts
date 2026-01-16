@@ -8,7 +8,7 @@ export const projects = [
     description:
       "An AI-powered interactive roadmap builder that converts learning goals into structured 2D/3D roadmaps with progress tracking and persistence.",
     tech: ["React", "TypeScript", "Zustand", "Firebase"],
-    live: "https://roadmap-2cb3b.web.app/logina",
+    live: "https://roadmap-2cb3b.web.app/login",
     github: "https://github.com/Mind-Map-Ai",
     image: mindMapImg,
   },
